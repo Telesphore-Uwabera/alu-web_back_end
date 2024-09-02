@@ -20,13 +20,10 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     Returns:
         List[float]: A list of delays in ascending order.
     """
-    # Create a list of coroutines
-    delays = await asyncio.gather(*(wait_random(max_delay) for _ in range(n)))
-
-    # Sort the delays manually by using bubble sort (to avoid using built-in sort())
-    for i in range(len(delays)):
-        for j in range(i + 1, len(delays)):
-            if delays[i] > delays[j]:
-                delays[i], delays[j] = delays[j], delays[i]
-
+    # Create a list of tasks
+    tasks = [asyncio.create_task(wait_random(max_delay)) for _ in range(n)]
+    
+    # Gather results as they complete using asyncio.as_completed
+    delays = [await task for task in asyncio.as_completed(tasks)]
+    
     return delays
