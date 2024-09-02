@@ -3,7 +3,6 @@
 Module 0-add
 Contains a function to add two float numbers.
 """
-
 def add(a: float, b: float) -> float:
     """
     Add two float numbers and return the result.
@@ -16,4 +15,3 @@ def add(a: float, b: float) -> float:
         float: The sum of the two numbers.
     """
     return a + b
-
