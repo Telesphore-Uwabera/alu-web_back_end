@@ -4,14 +4,14 @@ Module 102-type_checking
 Contains a function that zooms in on an array.
 """
 
-from typing import List
+from typing import Tuple, List
 
-def zoom_array(lst: List[int], factor: int = 2) -> List[int]:
+def zoom_array(lst: Tuple[int, ...], factor: int = 2) -> List[int]:
     """
-    Zooms in on a list by repeating each element `factor` times.
+    Zooms in on a tuple by repeating each element `factor` times.
 
     Args:
-        lst (List[int]): The list of integers to zoom in on.
+        lst (Tuple[int, ...]): The tuple of integers to zoom in on.
         factor (int): The number of times to repeat each element. Defaults to 2.
 
     Returns:
@@ -24,9 +24,9 @@ def zoom_array(lst: List[int], factor: int = 2) -> List[int]:
     return zoomed_in
 
 # Test cases
-array = [12, 72, 91]
+array = (12, 72, 91)  # Changed to tuple for testing
 
 zoom_2x = zoom_array(array)
 
-# This will now raise a TypeError, as expected
+# This should raise a TypeError if uncommented, as expected
 # zoom_3x = zoom_array(array, 3.0)
