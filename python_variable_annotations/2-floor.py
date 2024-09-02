@@ -7,6 +7,7 @@ Contains a function to return the floor of a float.
 
 import math
 
+
 def floor(n: float) -> int:
 
 
