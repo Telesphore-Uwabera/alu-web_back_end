@@ -52,7 +52,7 @@ class Server:
 
         Returns:
             List[List]: A list of rows from the dataset corresponding
-              to the 
+              to the
             specified page.
         """
         # Validate that page and page_size are positive integers
