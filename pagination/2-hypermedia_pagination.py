@@ -6,7 +6,7 @@ This module provides pagination capabilities for a dataset
 
 import csv
 import math
-from typing import List, Dict, Any
+from typing import List, Tuple, Dict, Any  # Ensure Tuple is imported
 
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
