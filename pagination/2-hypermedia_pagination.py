@@ -53,7 +53,7 @@ class Server:
             page_size (int): The number of items per page. Default is 10.
 
         Returns:
-            List[List]: A list of rows from the dataset corresponding to the 
+            List[List]: A list of rows from the dataset corresponding to the
             specified page.
         """
         # Validate that page and page_size are positive integers
