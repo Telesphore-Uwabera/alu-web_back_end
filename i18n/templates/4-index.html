@@ -1,15 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ get_locale() }}">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask i18n Example</title>
+    <title>{{_('home_title')}}</title>
 </head>
 <body>
-    {% if get_locale() == 'fr' %}
-        <h1>Bienvenue</h1>
-    {% else %}
-        <h1>Welcome</h1>
-    {% endif %}
+    <h1>{{_('home_header')}}</h1>
 </body>
 </html>
