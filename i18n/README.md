@@ -1,1 +1,1 @@
-this is localization and initialization project
+# i18n
